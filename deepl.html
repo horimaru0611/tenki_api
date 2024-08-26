@@ -4,35 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sample.css">
     <title>翻訳サイト</title>
     <style>
-        #view{
+    #view{
             padding: 10px;
             border: 4px solid #6f28bb;
             width: 50%px;
             background-color: aliceblue;
             height:500px;
+            
             overflow: auto;
         }
-        img{
-            width:50px;
-        }
+
         #view>div{
             border-bottom: 1px dotted #3838ab;
             font-size:medium;
         }
-        .bold{
-            font-weight: bold;
-        }
-        h2{
-            font-size:x-large;
-            color:#f1071e;
-        }
+
     </style>
 </head>
 <body>
-
+    <div class="title_head">  
     <h1>翻訳サイト</h1>
+</div>
     <div>
         <div>
             翻訳先の言語　<select name="month" id="lan">
@@ -45,10 +40,13 @@
                 <option value="ru">ロシア語</option>
                 </select>
         </div>
-        <div>
+        翻訳したい単語、言葉を入力してください。
+        <div>  
             <textarea id="text" cols="30" rows="10"></textarea>
             <button id="send">送信</button>
         </div>
+
+        
         <div id="view" style="overflow: auto;height: 300px;border:1px solid red" ></div>
     </div>
  
@@ -70,6 +68,16 @@
     const b_text = msg.text;
     const gengo = msg.lan;
 
+   /* const lan_ck =[ja,en,fr,it,es,zh,ru]
+    const lan_b =[日本語,英語,フランス語,イタリア語,スペイン語,中国語,ロシア語]
+
+    for(i=0;i<lan_ck.length;i++){
+    if($("#lan").val()=lan_ck[i]){
+        let honyaku =lan_b[i];
+        console.log(data);
+    }
+
+    }*/
 
 
         //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
